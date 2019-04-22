@@ -16,18 +16,13 @@ for (var key1 in jsonContent1) {
             for (var variable in jsonContent1[key1]) {
 
                 if ((jsonContent1[key1][variable] == jsonContent2[key1][variable]) == false) {
-                    if (Array.isArray(jsonContent1[key1][variable]) == true) { //если элемент массив, а не переменная, то отдельная проверка
+                   
                         if ((JSON.stringify(jsonContent1[key1][variable]) == JSON.stringify(jsonContent2[key2][variable])) == false) {
                             console.log("\t"+variable);
                             Printjson("json1", jsonContent1[key1][variable]);
                             Printjson("json2", jsonContent2[key2][variable]);
                         }
-                    }
-                    else {
-                        console.log("\t"+variable);
-                        Printjson("json1", jsonContent1[key1][variable]);
-                        Printjson("json2", jsonContent2[key2][variable]);
-                    }
+                   
 
                 }
 
