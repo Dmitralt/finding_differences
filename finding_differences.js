@@ -14,18 +14,11 @@ for (var key1 in jsonContent1) {
                 console.log(key1);
             }
             for (var variable in jsonContent1[key1]) {
-
-                if ((jsonContent1[key1][variable] == jsonContent2[key1][variable]) == false) {
-                   
-                        if ((JSON.stringify(jsonContent1[key1][variable]) == JSON.stringify(jsonContent2[key2][variable])) == false) {
-                            console.log("\t"+variable);
-                            Printjson("json1", jsonContent1[key1][variable]);
-                            Printjson("json2", jsonContent2[key2][variable]);
-                        }
-                   
-
+                if ((JSON.stringify(jsonContent1[key1][variable]) == JSON.stringify(jsonContent2[key2][variable])) == false) {
+                    console.log("\t" + variable);
+                    Printjson("json1", jsonContent1[key1][variable]);
+                    Printjson("json2", jsonContent2[key2][variable]);
                 }
-
             }
 
         }
