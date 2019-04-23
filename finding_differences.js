@@ -28,4 +28,28 @@ for (var key1 in jsonContent1) {
 }
 
 
+////Ищем недублирующиеся ключи
+function PrintUnique(jsonPrime,jsonDouble)
+{
+    for (var key1 in jsonPrime) 
+    {
+        var existKey=false;
+        for (var key2 in jsonDouble) 
+        {
+            if (key1 == key2)//ищем ключи что совпадают
+            {
+                existKey=true;
+            }
+        }
+        if(existKey==false)
+        {console.log(key1);}
+        
+    }
+
+};
+console.log("-------------------------FIRST-------------------------");
+PrintUnique(jsonContent1,jsonContent2);
+console.log("------------------------SECOND------------------------");
+PrintUnique(jsonContent2,jsonContent1);
+
 
